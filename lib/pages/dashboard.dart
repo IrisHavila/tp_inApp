@@ -5,6 +5,12 @@ import 'package:flutter/material.dart';
 class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(color: Colors.black),
+        ),
+      ),
+    );
   }
 }

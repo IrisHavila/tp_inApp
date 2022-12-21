@@ -10,6 +10,8 @@ class ProduitPage extends StatelessWidget {
         title: Text('Produit'),
         backgroundColor: Color(0xFF111111),
         toolbarHeight: 100.0,
+        actions: [Icon(Icons.search), Icon(Icons.add)],
+        actionsIconTheme: IconThemeData(color: Color(0xFF098AA6)),
       ),
       body: SingleChildScrollView(
         child: Container(

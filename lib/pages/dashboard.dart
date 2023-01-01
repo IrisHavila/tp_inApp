@@ -21,19 +21,20 @@ class Dashboard extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (int index) {
-          setState(() {
-            _selectedIndex = index;
-          });
+          setState(({
+            _selectedIndex = index,
+          }));
         },
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: 'Inscription'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.info), label: 'Informations'),
+          BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'Boutiques'),
+          BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'Commandes'),
+          BottomNavigationBarItem(icon: Icon(Icons.gif_box), label: 'Produits'),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: 'Paramètres'),
         ],
       ),
     );
   }
+
+  void setState(Set<int> set) {}
 }

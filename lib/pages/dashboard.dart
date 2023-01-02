@@ -66,6 +66,9 @@ class Boutique extends StatelessWidget {
           body: TabBarView(children: [
             Container(
               color: Colors.black,
+              child: Column(
+                children: [],
+              ),
             ),
             Container(
               color: Colors.green,
@@ -86,13 +89,98 @@ class Commandes extends StatelessWidget {
   const Commandes({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext) {
-    return Container(
-      color: const Color(0xff000000),
-      child: Center(
-          child: Text(
-        "Commandes",
-        style: TextStyle(color: Colors.white, fontSize: 45),
-      )),
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 120,
+        backgroundColor: Color(0xff111111),
+        automaticallyImplyLeading: false,
+        title: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Commandes',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            Text(
+              'Toutes les commandes',
+              style: TextStyle(
+                  color: Color(0xffffffff),
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500),
+            ),
+          ],
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.add,
+                color: Color(0xff098AA6),
+                size: 25,
+              ),
+              onPressed: () {}),
+          IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Color(0xff098AA6),
+                size: 25,
+              ),
+              onPressed: () {}),
+        ],
+      ),
+      body: Container(
+        color: Colors.black,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "En attente de votre premiere commande",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Image.asset(
+                'assets/images/Group1.png',
+                height: 320.0,
+                width: 320.0,
+              ),
+              Text(
+                "Decouvrez comment augmenter vos ventes",
+                style: TextStyle(fontSize: 15, color: Color(0xff616161)),
+              ),
+              SizedBox(
+                height: 15.0,
+              ),
+              SizedBox(
+                height: 40.0,
+                width: 180.0,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Color(0xFF098AA6)),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    'En apprendre plus',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
@@ -102,13 +190,57 @@ class Produits extends StatelessWidget {
   const Produits({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext) {
-    return Container(
-      color: const Color(0xff000000),
-      child: Center(
-          child: Text(
-        "Produit",
-        style: TextStyle(color: Colors.white, fontSize: 45),
-      )),
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 120,
+        backgroundColor: Color(0xff111111),
+        automaticallyImplyLeading: false,
+        title: Text(
+          "Produits",
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.add,
+                color: Color(0xff098AA6),
+                size: 25,
+              ),
+              onPressed: () {}),
+          IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Color(0xff098AA6),
+                size: 25,
+              ),
+              onPressed: () {}),
+        ],
+      ),
+      body: Container(
+        color: Colors.black,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "En attente de votre premier produit",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Image.asset(
+                'assets/images/Group1.png',
+                height: 350.0,
+                width: 350.0,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

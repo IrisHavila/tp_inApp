@@ -171,7 +171,7 @@ class SigninPageState extends State<SigninPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                            return Dashboard();
+                            return DashboardPage();
                           }),
                         );
                       },
@@ -193,7 +193,7 @@ class SigninPageState extends State<SigninPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                          return Dashboard();
+                          return DashboardPage();
                         }),
                       );
                     },

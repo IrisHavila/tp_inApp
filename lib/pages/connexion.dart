@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'dashboard.dart';
 import 'package:flutter/material.dart';
 import 'inscription.dart';
@@ -170,7 +171,7 @@ class LoginPageState extends State<LoginPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (BuildContext context) {
-                        return Dashboard();
+                        return DashboardPage();
                       }),
                     );
                   },

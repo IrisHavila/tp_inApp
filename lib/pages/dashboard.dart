@@ -176,21 +176,21 @@ class DashboardPageState extends State<DashboardPage> {
               BottomNavigationBarItem(
                 backgroundColor: Colors.black,
                 icon: Icon(
-                  Icons.shop,
+                  Icons.store,
                   size: 22,
                 ),
                 label: 'Boutique',
               ),
               BottomNavigationBarItem(
                   icon: Icon(
-                    Icons.notes,
+                    Icons.article,
                     size: 22,
                   ),
                   backgroundColor: Colors.black,
                   label: 'Commandes'),
               BottomNavigationBarItem(
                   icon: Icon(
-                    Icons.account_box,
+                    Icons.shopping_bag,
                     size: 22,
                   ),
                   backgroundColor: Colors.black,

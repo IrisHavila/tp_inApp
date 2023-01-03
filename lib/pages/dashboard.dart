@@ -3,6 +3,7 @@ import 'connexion.dart';
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
 import 'package:flutter/widgets.dart';
+import 'addProduit.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});

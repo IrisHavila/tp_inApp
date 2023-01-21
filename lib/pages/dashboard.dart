@@ -1,9 +1,10 @@
 import 'dart:ui';
+import 'package:tp_inapp/components/addProduit.dart';
+import 'package:tp_inapp/components/statistiques.dart';
 import 'connexion.dart';
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
 import 'package:flutter/widgets.dart';
-import 'addProduit.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -35,7 +36,7 @@ class Boutique extends StatelessWidget {
                   height: 5.0,
                 ),
                 Text(
-                  'Flutter Shop',
+                  'Dashboard',
                   style: TextStyle(
                       color: Color(0xff616161),
                       fontSize: 18.0,
@@ -67,9 +68,8 @@ class Boutique extends StatelessWidget {
           body: TabBarView(children: [
             Container(
               color: Colors.black,
-              child: Column(
-                children: [],
-              ),
+              // Le contenu statistique du dashboard (graphe) cf components/statistique
+              child: const Statistique(),
             ),
             Container(
               color: Colors.green,
@@ -190,7 +190,7 @@ class Commandes extends StatelessWidget {
 class Produits extends StatelessWidget {
   const Produits({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 120,
@@ -207,7 +207,13 @@ class Produits extends StatelessWidget {
                 color: Color(0xff098AA6),
                 size: 25,
               ),
-              onPressed: () {}),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AddProductPage()),
+                );
+              }),
           IconButton(
               icon: Icon(
                 Icons.search,

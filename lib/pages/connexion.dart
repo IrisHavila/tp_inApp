@@ -1,4 +1,9 @@
 import 'dart:ui';
+import 'package:tp_inapp/components/addProduit.dart';
+import 'package:tp_inapp/pages/DetailProduit.dart';
+import 'package:tp_inapp/pages/ListeCommandes.dart';
+import 'package:tp_inapp/pages/ListeProduits.dart';
+
 import 'dashboard.dart';
 import 'package:flutter/material.dart';
 import 'inscription.dart';

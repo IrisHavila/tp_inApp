@@ -39,8 +39,10 @@ class SigninPageState extends State<SigninPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Container(
+          height: double.maxFinite,
           decoration: BoxDecoration(color: Colors.black),
           child: Container(
             decoration: BoxDecoration(color: Colors.black),
@@ -74,6 +76,9 @@ class SigninPageState extends State<SigninPage> {
                 Container(
                   width: 320.0,
                   child: TextFormField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 10.0),
@@ -99,6 +104,9 @@ class SigninPageState extends State<SigninPage> {
                 Container(
                   width: 320.0,
                   child: TextFormField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
                       hintText: 'Mot de passe',
                       hintStyle: TextStyle(
@@ -124,6 +132,9 @@ class SigninPageState extends State<SigninPage> {
                 Container(
                   width: 320.0,
                   child: TextFormField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: InputDecoration(
                       hintText: 'Confirmation du mot de passe',
                       hintStyle: TextStyle(
@@ -171,7 +182,7 @@ class SigninPageState extends State<SigninPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                            return DashboardPage();
+                            return LoginPage();
                           }),
                         );
                       },
